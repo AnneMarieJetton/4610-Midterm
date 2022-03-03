@@ -10,6 +10,7 @@ export const Todo = ({ todo }) => {
     // you wont actually need to do anything with the result of the API call
     // because we are optimistically updating the state.
     // When you refresh the page you should see your state persist.
+    await api.put(`todos/${todo.id}`);
   };
 
   return (

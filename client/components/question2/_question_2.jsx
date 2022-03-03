@@ -1,3 +1,5 @@
+import { User } from "./User";
+
 export const Question2 = () => {
   const users = [
     { id: 1, name: 'Abby Zollinger', email: 'abby@usu.edu', isAdmin: true },
@@ -9,5 +11,19 @@ export const Question2 = () => {
     { id: 7, name: 'Gerald Truman', email: 'gerald@usu.edu', isAdmin: false },
     { id: 8, name: 'Harry Styles', email: 'harry@usu.edu', isAdmin: false },
   ];
-  return <div>Render your users here!</div>;
+
+  //const aUser = { id: 1, name: 'Abby Zollinger', email: 'abby@usu.edu', isAdmin: true };
+
+  //return <div>Render your users here!</div>;
+  return (
+    <div>
+      {users.map((aUser) => (
+        <div key={aUser.id}>
+          <User user={aUser} />
+        </div>
+      ))}
+    </div>
+  );
+
+  //need to map
 };
